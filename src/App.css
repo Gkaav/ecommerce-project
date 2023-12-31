@@ -1,25 +1,87 @@
 :root {
---Orange: hsl(26, 100%, 55%);
---Pale-orange: hsl(25, 100%, 94%);
---Very-dark-blue: hsl(220, 13%, 13%);
---Dark-grayish-blue: hsl(219, 9%, 45%);
---Grayish-blue: hsl(220, 14%, 75%);
---Light-grayish-blue: hsl(223, 64%, 98%);
---White: hsl(0, 0%, 100%);
---Black-with-opacity: hsl(0, 0%, 0%);
---main-font: 'Kumbh Sans', sans-serif;
+  --Orange: hsl(26, 100%, 55%);
+  --Pale-orange: hsl(25, 100%, 94%);
+  --Very-dark-blue: hsl(220, 13%, 13%);
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black-with-opacity: hsl(0, 0%, 0%);
+  --main-font: 'Kumbh Sans', sans-serif;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: var(--main-font)
+  font-family: var(--main-font);
 }
 
-.cart-img {
+.header-cart {
+  margin: 0 2rem;
+}
+
+.header-img img {
   width: 30px;
   height: 30px;
+  object-fit: cover;
 }
+
+.header {
+  width: 80%;
+  margin: auto;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--Grayish-blue);
+}
+
+.header-categories ul {
+  list-style: none;
+  border: 1px solid green
+}
+
+.header-categories a {
+  text-decoration: none;
+  color: var(--Grayish-blue);
+  border: 1px solid red;
+  height: 10rem;
+}
+
+.header-categories ul li {
+  display: inline-block;
+  margin: 0 1rem;
+  border: 1px solid var(--Grayish-blue);
+}
+.header-categories ul li:hover {
+  border-bottom: 5px solid yellow;
+  height: 4rem;
+}
+
+.header-categories a:hover {
+  color: var(--Very-dark-blue);
+}
+
+.header-categories-box li {
+  margin: auto;
+  width: 10px;
+  height: 4rem;
+
+}
+
+.header-categories {
+  display: flex;
+}
+
+.header-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+/* Add media queries for responsiveness if needed */
