@@ -24,10 +24,17 @@ body {
   margin: 0 2rem;
 }
 
+
+.header-user:hover {
+  border: 2px solid var(--Orange);
+  border-radius: 50%;
+}
+
 .header-img img {
   width: 30px;
   height: 30px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .header {
@@ -36,40 +43,36 @@ body {
   height: 6rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   border-bottom: 1px solid var(--Grayish-blue);
 }
 
 .header-categories ul {
   list-style: none;
-  border: 1px solid green
+  display: flex;
+  align-items: center;
+}
+
+.header-categories li {
+  margin: 0 1rem;
+  height: 4rem;
 }
 
 .header-categories a {
   text-decoration: none;
   color: var(--Grayish-blue);
-  border: 1px solid red;
-  height: 10rem;
-}
-
-.header-categories ul li {
-  display: inline-block;
-  margin: 0 1rem;
-  border: 1px solid var(--Grayish-blue);
-}
-.header-categories ul li:hover {
-  border-bottom: 5px solid yellow;
-  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.3rem;
 }
 
 .header-categories a:hover {
   color: var(--Very-dark-blue);
 }
 
-.header-categories-box li {
-  margin: auto;
-  width: 10px;
-  height: 4rem;
-
+.header-categories ul li:hover {
+  border-bottom: 5px solid var(--Orange);
 }
 
 .header-categories {
@@ -83,5 +86,3 @@ body {
   margin-top: 2rem;
   align-items: center;
 }
-
-/* Add media queries for responsiveness if needed */
