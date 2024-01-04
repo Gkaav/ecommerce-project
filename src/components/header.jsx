@@ -1,4 +1,4 @@
-import { loggedInUser } from "../data"; // Update the path accordingly
+import { loggedInUser } from "../data"
 
 function Header() {
   const assetsBaseUrl =
