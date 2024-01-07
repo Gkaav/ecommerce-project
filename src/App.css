@@ -90,7 +90,7 @@ body {
 
 .product {
   width: 90%;
-  height: 32rem;
+  height: 30rem;
   margin: 3rem auto auto auto;
 }
 
@@ -257,7 +257,7 @@ body {
   border-radius: 5px;
   color: white;
   gap: 6px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .add-to-cart:hover{
@@ -288,4 +288,68 @@ filter: brightness(0) invert(1);
 .add-to-cart img{
   width: 16px;
   height: 16px;
+}
+
+.reviews {
+  width: 90%;
+  height: 32rem;
+  margin: auto;
+}
+
+.reviews-container {
+  width: 70%;
+  height: 90%;
+  margin: auto;
+  margin-top: 1.5rem;
+}
+
+.reviews-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-review {
+  background-color: var(--Orange);
+  border-radius: 5px;
+  color: white;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  position: relative;
+  top: 0.3rem;
+}
+
+.add-review:hover {
+  opacity: 0.7;
+}
+
+.user-review {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+  margin-top: 3rem;
+  width: 75%;
+}
+
+.user-reviews {
+  margin-top: 1rem;
+}
+
+.user-stars {
+  margin-top: 0.5rem;
+}
+
+.review-headline {
+  margin-top: 0.5rem;
+  
+}
+
+.written-review {
+  margin-top: 0.7rem;
+  color: var(--Dark-grayish-blue);
+  font-size: small;
 }
