@@ -308,7 +308,7 @@ filter: brightness(0) invert(1);
   justify-content: space-between;
 }
 
-.add-review {
+.add-review-button {
   background-color: var(--Orange);
   border-radius: 5px;
   color: white;
@@ -323,7 +323,7 @@ filter: brightness(0) invert(1);
   top: 0.3rem;
 }
 
-.add-review:hover {
+.add-review-button:hover {
   opacity: 0.7;
 }
 
@@ -352,4 +352,27 @@ filter: brightness(0) invert(1);
   margin-top: 0.7rem;
   color: var(--Dark-grayish-blue);
   font-size: small;
+}
+
+.add-review {
+  width: 90%;
+  height: 32rem;
+  margin: auto;
+}
+
+.add-review-container {
+  width: 70%;
+  height: 90%;
+  margin: auto;
+  margin-top: 1.5rem;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+}
+
+.WrittenReview {
+  display: flex;
+  flex-direction: column;
 }

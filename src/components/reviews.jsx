@@ -8,7 +8,7 @@ function Reviews() {
         <div className="reviews-container">
           <div className="reviews-title">
             <h1>Customer reviews</h1>
-            <div className="add-review">
+            <div className="add-review-button">
               <p>Write a review</p>
             </div>
           </div>

@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/header";
 import Product from "./components/product";
 import Reviews from "./components/reviews";
+import AddReview from "./components/addReview";
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <div>
         <Header />
         <Product />
-        <Reviews />
+        {/* <Reviews /> */}
+        <AddReview />
       </div>
     </>
   );
