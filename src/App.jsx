@@ -3,6 +3,7 @@ import Header from "./components/header";
 import Product from "./components/product";
 import Reviews from "./components/reviews";
 import AddReview from "./components/addReview";
+import EditReview from "./components/editReview";
 
 function App() {
   return (
@@ -10,8 +11,8 @@ function App() {
       <div>
         <Header />
         <Product />
-        {/* <Reviews /> */}
-        <AddReview />
+        <Reviews />
+        {/* <AddReview></AddReview> */}
       </div>
     </>
   );

@@ -1,33 +1,46 @@
+// AddReview.jsx
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-const AddReview = () => {
-  const [rating, setRating] = useState(null);
+const AddReview = ({ onCancel, onSubmit, editingReview, customClass }) => {
+  const [rating, setRating] = useState(editingReview?.starRating || null);
 
   const initialValues = {
-    headline: "",
-    WrittenReview: "",
+    headline: editingReview?.headline || "",
+    writtenReview: editingReview?.writtenReview || "",
   };
 
   const validationSchema = Yup.object({
-    headline: Yup.string().required("Please enter your headline"),
-    WrittenReview: Yup.string().required("Please enter your written review"),
+    headline: Yup.string()
+      .min(4, "Headline must be at least 4 characters")
+      .required("Please enter your headline"),
+    writtenReview: Yup.string()
+      .min(15, "written review must be at least 4 characters")
+      .required("Please enter your written review"),
   });
 
   const formik = useFormik({
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      console.log("Form Submitted with values:", {
+      const newReview = {
+        user: "Your review",
+        starRating: rating,
         ...values,
-        overall: rating,
-      });
+      };
+
+      onSubmit(newReview);
     },
   });
 
   const handleStarClick = (selectedRating) => {
     setRating(selectedRating);
+    formik.setFieldError("addedStars", "");
+  };
+
+  const handleCancel = () => {
+    onCancel();
   };
 
   const renderStars = () => {
@@ -39,9 +52,15 @@ const AddReview = () => {
         <img
           key={i}
           className="user-star"
-          src="./src/assets/icon-star.svg"
+          src={
+            i <= rating
+              ? "./src/assets/yellow-icon-star.svg"
+              : "./src/assets/icon-star.svg"
+          }
           alt={`Star ${i}`}
-          style={{ fill: i <= rating ? "yellow" : "none" }}
+          style={{
+            cursor: "pointer",
+          }}
           onClick={() => handleStarClick(i)}
         />
       );
@@ -51,23 +70,26 @@ const AddReview = () => {
   };
 
   return (
-    <div className="add-review">
+    <div className={`add-review`}>
       <div className="add-review-container">
         <form onSubmit={formik.handleSubmit}>
-          <div>
+          <h1>Add a review</h1>
+          <div className="overall-container">
             <label htmlFor="overall" className="overall">
-              overall:
+              <h4>overall rating</h4>
             </label>
-            <div className="user-stars" name="headline">
+            <div className="user-stars" name="addedStars">
               {renderStars()}
             </div>
-            {formik.touched.overall && formik.errors.overall ? (
-              <div>{formik.errors.overall}</div>
-            ) : null}
+            <div className="error-message">
+              {formik.touched.addedStars && rating === null ? (
+                <div>{formik.errors.addedStars}</div>
+              ) : null}
+            </div>
           </div>
-          <div>
+          <div className="headline-container">
             <label htmlFor="headline" className="headline">
-              headline:
+              <h4>headline</h4>
             </label>
             <input
               type="text"
@@ -78,26 +100,43 @@ const AddReview = () => {
               onBlur={formik.handleBlur}
               value={formik.values.headline}
             />
-            {formik.touched.headline && formik.errors.headline ? (
-              <div>{formik.errors.headline}</div>
-            ) : null}
+            <div className="error-message">
+              {formik.touched.headline && formik.errors.headline ? (
+                <div>{formik.errors.headline}</div>
+              ) : null}
+            </div>
           </div>
           <div className="WrittenReview">
-            <label htmlFor="WrittenReview">written review:</label>
+            <label htmlFor="WrittenReview">
+              <h4>Written Review</h4>
+            </label>
             <input
               type="text"
               id="WrittenReview"
-              name="WrittenReview"
-              placeholder="What did you like or dislike? What did you use this product for?"
+              name="writtenReview"
+              placeholder="What’s most important to know?"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.WrittenReview}
+              value={formik.values.writtenReview}
             />
-            {formik.touched.WrittenReview && formik.errors.WrittenReview ? (
-              <div>{formik.errors.WrittenReview}</div>
-            ) : null}
+            <div className="error-message">
+              {formik.touched.writtenReview && formik.errors.writtenReview ? (
+                <div>{formik.errors.writtenReview}</div>
+              ) : null}
+            </div>
           </div>
-          <button type="submit">Submit</button>
+          <div className="review-buttons">
+            <button
+              type="button"
+              className="review-cancel"
+              onClick={handleCancel}
+            >
+              Cancel
+            </button>
+            <button type="submit" className="review-submit">
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     </div>

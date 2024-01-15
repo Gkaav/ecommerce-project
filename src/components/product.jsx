@@ -6,7 +6,7 @@ function Product() {
   const originalImages = product.images.originals;
   const [thumbnailImage, setThumbnailImage] = useState(originalImages[0]);
   const [selectedThumbnailIndex, setSelectedThumbnailIndex] = useState(0);
-  const [quantity, setQuantity] = useState(0); // Initial quantity
+  const [quantity, setQuantity] = useState(0);
 
   const handleThumbnailClick = (thumbnail, index) => {
     setThumbnailImage(originalImages[index]);
@@ -61,22 +61,22 @@ function Product() {
               <div className="product-description-review">
                 <img
                   className="filled-star"
-                  src="./src/assets/icon-star.svg"
+                  src="./src/assets/yellow-icon-star.svg"
                   alt=""
                 />
                 <img
                   className="filled-star"
-                  src="./src/assets/icon-star.svg"
+                  src="./src/assets/yellow-icon-star.svg"
                   alt=""
                 />
                 <img
                   className="filled-star"
-                  src="./src/assets/icon-star.svg"
+                  src="./src/assets/yellow-icon-star.svg"
                   alt=""
                 />
                 <img
                   className="filled-star"
-                  src="./src/assets/icon-star.svg"
+                  src="./src/assets/yellow-icon-star.svg"
                   alt=""
                 />
                 <img src="./src/assets/icon-star.svg" alt="" />
