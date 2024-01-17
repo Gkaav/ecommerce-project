@@ -1,4 +1,3 @@
-// AddReview.jsx
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -9,6 +8,7 @@ const AddReview = ({ onCancel, onSubmit, editingReview, customClass }) => {
   const initialValues = {
     headline: editingReview?.headline || "",
     writtenReview: editingReview?.writtenReview || "",
+    addedStars: editingReview?.starRating || "",
   };
 
   const validationSchema = Yup.object({
@@ -16,8 +16,11 @@ const AddReview = ({ onCancel, onSubmit, editingReview, customClass }) => {
       .min(4, "Headline must be at least 4 characters")
       .required("Please enter your headline"),
     writtenReview: Yup.string()
-      .min(15, "written review must be at least 4 characters")
+      .min(15, "written review must be at least 15 characters")
       .required("Please enter your written review"),
+    addedStars: Yup.string()
+      .min(1, "star rating must be at least 1 character")
+      .required("Please enter your star rating"),
   });
 
   const formik = useFormik({
@@ -48,19 +51,22 @@ const AddReview = ({ onCancel, onSubmit, editingReview, customClass }) => {
     const stars = [];
 
     for (let i = 1; i <= maxStars; i++) {
+      const starStyle = {
+        cursor: "pointer",
+        background: `url('${
+          i <= rating
+            ? "./src/assets/yellow-icon-star.svg"
+            : "./src/assets/icon-star.svg"
+        }') no-repeat center center`,
+        backgroundSize: "contain",
+        border: "none",
+      };
+
       stars.push(
-        <img
+        <button
           key={i}
           className="user-star"
-          src={
-            i <= rating
-              ? "./src/assets/yellow-icon-star.svg"
-              : "./src/assets/icon-star.svg"
-          }
-          alt={`Star ${i}`}
-          style={{
-            cursor: "pointer",
-          }}
+          style={starStyle}
           onClick={() => handleStarClick(i)}
         />
       );

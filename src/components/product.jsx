@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { product, assetsBaseUrl } from "../data";
 
-function Product() {
+function Product({ setCartQuantity }) {
   const thumbnailImages = product.images.thumbnails;
   const originalImages = product.images.originals;
   const [thumbnailImage, setThumbnailImage] = useState(originalImages[0]);
@@ -21,6 +21,10 @@ function Product() {
     if (quantity > 0) {
       setQuantity((prevQuantity) => prevQuantity - 1);
     }
+  };
+
+  const handleAddToCart = () => {
+    setCartQuantity(quantity);
   };
 
   return (
@@ -122,7 +126,7 @@ function Product() {
                     />
                   </div>
                 </div>
-                <div className="add-to-cart">
+                <div className="add-to-cart" onClick={handleAddToCart}>
                   <img src="../src/assets/icon-cart.svg" alt="" />
                   <p>Add to cart</p>
                 </div>

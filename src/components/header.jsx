@@ -1,6 +1,6 @@
-import { loggedInUser } from "../data"
+import { loggedInUser } from "../data";
 
-function Header() {
+function Header({ cartQuantity }) {
   const assetsBaseUrl =
     "https://res.cloudinary.com/dc2c49xov/image/upload/v1703352357/ecommerce-page";
 
@@ -30,11 +30,10 @@ function Header() {
           </ul>
         </div>
         <div className="header-img">
-          <img
-            src="./src/assets/icon-cart.svg"
-            alt=""
-            className="header-cart"
-          />
+          <div className="header-cart">
+            <img src="./src/assets/icon-cart.svg" alt="" />
+            <div className="header-cart-counter">{cartQuantity}</div>
+          </div>
           <img
             src={`${assetsBaseUrl}/${loggedInUser.profileImage}`}
             alt=""
@@ -45,7 +44,5 @@ function Header() {
     </div>
   );
 }
-
-console.log(loggedInUser.profileImage);
 
 export default Header;

@@ -1,21 +1,22 @@
 import "./App.css";
+import React, { useState } from "react";
 import Header from "./components/header";
 import Product from "./components/product";
 import Reviews from "./components/reviews";
-import AddReview from "./components/addReview";
-import EditReview from "./components/editReview";
+import AddReview from "./components/AddReview";
+import EditReview from "./components/EditReview";
 
-function App() {
+const YourApp = () => {
+  const [cartQuantity, setCartQuantity] = useState(0);
+
   return (
-    <>
-      <div>
-        <Header />
-        <Product />
-        <Reviews />
-        {/* <AddReview></AddReview> */}
-      </div>
-    </>
+    <div>
+      <Header cartQuantity={cartQuantity} />
+      <Product setCartQuantity={setCartQuantity} />
+      <Reviews />
+      {/* <AddReview /> */}
+    </div>
   );
-}
+};
 
-export default App;
+export default YourApp;
