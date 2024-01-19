@@ -39,7 +39,7 @@ const AddReview = ({ onCancel, onSubmit, editingReview, customClass }) => {
 
   const handleStarClick = (selectedRating) => {
     setRating(selectedRating);
-    formik.setFieldError("addedStars", "");
+    formik.setFieldValue("addedStars", selectedRating);
   };
 
   const handleCancel = () => {
@@ -68,6 +68,7 @@ const AddReview = ({ onCancel, onSubmit, editingReview, customClass }) => {
           className="user-star"
           style={starStyle}
           onClick={() => handleStarClick(i)}
+          type="button"
         />
       );
     }
@@ -88,9 +89,7 @@ const AddReview = ({ onCancel, onSubmit, editingReview, customClass }) => {
               {renderStars()}
             </div>
             <div className="error-message">
-              {formik.touched.addedStars && rating === null ? (
-                <div>{formik.errors.addedStars}</div>
-              ) : null}
+              <div>{formik.errors.addedStars}</div>
             </div>
           </div>
           <div className="headline-container">
