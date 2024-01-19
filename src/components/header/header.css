@@ -1,0 +1,81 @@
+.header-user:hover {
+    border: 2px solid var(--Orange);
+    border-radius: 50%;
+}
+
+.header-img img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.header-img {
+    display: flex;
+    gap: 2rem;
+}
+
+.header-cart-counter {
+    width: 20px;
+    height: 13px;
+    background-color: var(--Orange);
+    position: relative;
+    bottom: 2.2rem;
+    left: 1rem;
+    border-radius: 16px;
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+}
+
+.header {
+    width: 80%;
+    margin: auto;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--Grayish-blue);
+}
+
+.header-categories ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.header-categories li {
+    margin: 0 1rem;
+    height: 4rem;
+}
+
+.header-categories a {
+    text-decoration: none;
+    color: var(--Grayish-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.3rem;
+}
+
+.header-categories a:hover {
+    color: var(--Very-dark-blue);
+}
+
+.header-categories ul li:hover {
+    border-bottom: 5px solid var(--Orange);
+}
+
+.header-categories {
+    display: flex;
+    margin-right: 12rem;
+}
+
+.header-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    align-items: center;
+}

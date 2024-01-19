@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./reviews.css";
 
 function EditReview({ onCancel, onSubmit, editingReview }) {
   const [editedReview, setEditedReview] = useState(editingReview);

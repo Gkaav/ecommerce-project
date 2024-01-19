@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { product } from "../data";
-import AddReview from "./AddReview";
-import EditReview from "./EditReview";
+import { product } from "../../data";
+import AddReview from "./addReview";
+import EditReview from "./editReview";
+import "./reviews.css";
 
 const Reviews = () => {
   const [showAddReview, setShowAddReview] = useState(false);

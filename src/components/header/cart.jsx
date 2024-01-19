@@ -1,5 +1,6 @@
 import React from "react";
-import { product, assetsBaseUrl } from "../data";
+import "./cart.css";
+import { product, assetsBaseUrl } from "../../data";
 
 function Cart({
   cartQuantity,

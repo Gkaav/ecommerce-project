@@ -1,11 +1,11 @@
 import "./App.css";
 import React, { useState } from "react";
-import Header from "./components/header";
-import Product from "./components/product";
-import Reviews from "./components/reviews";
-import AddReview from "./components/AddReview";
-import EditReview from "./components/EditReview";
-import Cart from "./components/cart";
+import Header from "./components/header/header";
+import Product from "./components/product/product";
+import Reviews from "./components/reviews/reviews";
+import AddReview from "./components/reviews/addReview";
+import EditReview from "./components/reviews/editReview";
+import Cart from "./components/header/cart";
 
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);

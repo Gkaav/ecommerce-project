@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import "./reviews.css";
 
 const AddReview = ({ onCancel, onSubmit, editingReview, customClass }) => {
   const [rating, setRating] = useState(editingReview?.starRating || null);

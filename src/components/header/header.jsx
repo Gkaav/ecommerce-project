@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { loggedInUser } from "../data";
-import Cart from "./Cart";
+import { loggedInUser } from "../../data";
+import Cart from "./cart";
+import "./header.css";
 
 function Header({ cartQuantity, onCartClick }) {
   const assetsBaseUrl =

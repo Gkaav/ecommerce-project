@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { product, assetsBaseUrl } from "../data";
+import { product, assetsBaseUrl } from "../../data";
+import "./product.css";
 
 function Product({ setCartQuantity, setCartThumbnail }) {
   const thumbnailImages = product.images.thumbnails;

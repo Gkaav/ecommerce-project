@@ -1,0 +1,196 @@
+.reviews {
+    width: 90%;
+    height: 32rem;
+    margin: auto;
+}
+
+.reviews-container {
+    width: 70%;
+    height: 90%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.reviews-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-review-button {
+    background-color: var(--Orange);
+    border-radius: 5px;
+    color: white;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    position: relative;
+    top: 0.3rem;
+}
+
+.add-review-button:hover {
+    opacity: 0.7;
+}
+
+.user-review {
+    display: flex;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.user-text {
+    width: 75%;
+}
+
+.user-reviews {
+    margin-top: 1rem;
+    width: 75%;
+}
+
+.user-stars {
+    margin-top: 0.5rem;
+}
+
+.review-headline {
+    margin-top: 0.5rem;
+
+}
+
+.written-review {
+    margin-top: 0.7rem;
+    color: var(--Dark-grayish-blue);
+    font-size: small;
+}
+
+.add-review {
+    width: 65%;
+    height: 32rem;
+    margin: auto;
+}
+
+.add-review-container {
+    height: 90%;
+    width: 75%;
+    margin-top: 1.5rem;
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+}
+
+.WrittenReview {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+}
+
+.WrittenReview input {
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin-top: 0.7rem;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.overall-container {
+    margin: 1rem auto;
+}
+
+.headline-container input {
+    margin-top: 0.7rem;
+    border-radius: 10px;
+    border: 1px solid gray;
+    width: 100%;
+    height: 40px;
+}
+
+.add-review-container h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.headline-container input {
+    padding-left: 0.7rem;
+}
+
+.WrittenReview input {
+    padding-left: 0.7rem;
+    padding-bottom: 4rem;
+}
+
+.WrittenReview-input {
+    padding-left: 0.7rem;
+    padding-bottom: 4rem;
+}
+
+.review-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 2rem;
+}
+
+.review-cancel:hover {
+    opacity: 0.7;
+}
+
+.review-submit:hover {
+    opacity: 0.7;
+}
+
+.review-buttons button {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 7px;
+    border: 0;
+    color: white;
+}
+
+.review-cancel {
+    background-color: var(--Dark-grayish-blue);
+    cursor: pointer;
+}
+
+.review-submit {
+    cursor: pointer;
+    background-color: var(--Orange);
+}
+
+.review-actions {
+    width: 20%;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+.review-actions a {
+    text-decoration: underline;
+    cursor: pointer;
+    height: min-content;
+}
+
+.user-review-content {
+    display: flex;
+    width: 80%;
+}
+
+.user-text {
+    margin-left: 1rem;
+}
+
+
+.user-star {
+    width: 24px;
+    height: 24px;
+}
