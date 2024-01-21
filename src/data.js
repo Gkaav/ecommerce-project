@@ -1,5 +1,3 @@
-// data.js
-
 export const assetsBaseUrl =
   "https://res.cloudinary.com/dc2c49xov/image/upload/v1703352357/ecommerce-page";
 

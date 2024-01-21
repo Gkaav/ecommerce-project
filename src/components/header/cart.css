@@ -105,3 +105,21 @@
     font-weight: bold;
     color: black;
 }
+
+
+
+@media (max-width: 376px) {
+
+    .cart {
+        width: 300px;
+        height: 30vh;
+        position: absolute;
+        top: 4.5rem;
+        right: 2.25rem;
+    }
+
+    .added-cart-content{
+        margin-top: 1rem;
+    }
+    
+}

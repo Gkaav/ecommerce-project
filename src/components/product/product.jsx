@@ -37,7 +37,7 @@ function Product({ setCartQuantity, setCartThumbnail }) {
     <div className="product">
       <div className="product-container">
         <div className="product-visual">
-          <div>
+          <div className="mobile-product-img">
             <div className="product-img">
               <img src={`${assetsBaseUrl}/${thumbnailImage}`} alt="" />
             </div>
@@ -79,7 +79,6 @@ function Product({ setCartQuantity, setCartThumbnail }) {
               <img src="./src/assets/icon-star.svg" alt="" />
               <p>{calculateAverageRating(4.2)}</p>
             </div>
-
             <div className="product-description-text">
               <p>
                 These low-profile sneakers are your perfect casual wear

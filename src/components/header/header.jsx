@@ -17,6 +17,9 @@ function Header({ cartQuantity, onCartClick }) {
   return (
     <div className="header">
       <div className="header-container">
+        <div className="mobile-categories">
+          <button></button>
+        </div>
         <div>
           <img src="./src/assets/logo.svg" alt="" className="header-logo" />
         </div>
