@@ -194,3 +194,92 @@
     width: 24px;
     height: 24px;
 }
+
+.pc-actions {
+    display: block;
+}
+
+.mobile-actions {
+    display: none;
+}
+
+
+@media (max-width: 376px) {
+    .reviews {
+            width: 90%;
+            margin: auto;
+        }
+        
+        .reviews-container {
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            margin-top: 2rem;
+        }
+        
+        .reviews-title h1 {
+            font-size: 20px;
+        }
+        
+        .reviews-title {
+            text-align: center;
+            align-items: center;
+        }
+            
+        .user-review {
+            display: block;
+            margin-top: 2rem;
+        }
+        
+        .user-img {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .user-img img {
+            margin-bottom: 0.5rem;
+        }
+        
+        .user-text {
+            width: 100%;
+            margin-left: 0;
+        }
+        
+        .user-reviews {
+            width: 100%;
+        }
+        
+        .written-review {
+            margin-top: 0.7rem;
+            color: var(--Dark-grayish-blue);
+            font-size: small;        
+        }
+        
+        .review-actions {
+            width: 100%;
+        }
+        
+        .pc-actions {
+            display: none;
+        }
+        
+        .mobile-actions {
+            display: block;
+        }
+        
+        .add-review-button {
+            padding: 1rem;
+        }
+
+        .add-review {
+            width: 100%;
+            height: 32rem;
+            margin: auto;
+        }
+        
+        .add-review-container {
+            width: 100%;
+        }
+
+        
+    }

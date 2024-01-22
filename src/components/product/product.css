@@ -203,6 +203,7 @@
 
     .product {
         width: 100%;
+        height: 55rem;
     }
     
     .product-container {
@@ -283,10 +284,6 @@
 
     .new-price {
         margin-top: 0;
-    }
-
-    .old-price {
-       
     }
 
     .discount-price {

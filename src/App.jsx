@@ -6,6 +6,7 @@ import Reviews from "./components/reviews/reviews";
 import AddReview from "./components/reviews/addReview";
 import EditReview from "./components/reviews/editReview";
 import Cart from "./components/header/cart";
+import Menu from "./components/header/menu";
 
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
@@ -36,6 +37,7 @@ const App = () => {
         setCartThumbnail={setCartThumbnail}
       />
       <Reviews />
+      {/* <Menu /> */}
     </div>
   );
 };

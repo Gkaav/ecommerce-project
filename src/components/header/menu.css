@@ -1,0 +1,54 @@
+.menu {
+    display: none;
+}
+
+
+@media (max-width: 376px) {
+        .menu {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 100vh;
+            display: block;
+            overflow: hidden;
+        }
+    
+        .menu-container ul {
+            list-style: none;
+    
+        }
+    
+        .menu-container li {
+            margin: 0 0.7rem;
+            height: 3rem;
+    
+        }
+    
+        .menu-container a {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+        }
+    
+        .menu-container {
+            width: 75%;
+            height: 100%;
+            background-color: var(--Pale-orange);
+            padding-left: 1rem;
+        }
+    
+        .menu-close {
+            height: 100%;
+        }
+
+        .menu-close button{
+            background: url(/src/assets/icon-close.svg);
+            width: 14px;
+            height: 15px;
+            margin-left: 0.7rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+            border: 0;
+    }
+}

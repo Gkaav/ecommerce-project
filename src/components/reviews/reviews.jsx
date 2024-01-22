@@ -104,6 +104,9 @@ const Reviews = () => {
                 <div className={`user-review `} key={index}>
                   <div className="user-img">
                     <img src="./src/assets/user-placeholder.png" alt="" />
+                    <div className="mobile-actions">
+                      {renderActions(review.isYourReview, index)}
+                    </div>
                   </div>
                   <div className="user-text">
                     <h5 className="user-name">{review.user}</h5>
@@ -111,7 +114,9 @@ const Reviews = () => {
                     <h5 className="review-headline">{review.headline}</h5>
                     <p className="written-review">{review.writtenReview}</p>
                   </div>
-                  {renderActions(review.isYourReview, index)}
+                  <div className="pc-actions">
+                    {renderActions(review.isYourReview, index)}
+                  </div>
                 </div>
               ))}
             </div>
