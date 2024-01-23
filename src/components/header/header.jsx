@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { loggedInUser } from "../../data";
 import Cart from "./cart";
-import Menu from "./menu"; // Import the Menu component
+import Menu from "./menu";
 import "./header.css";
 
 function Header({ cartQuantity, onCartClick }) {
@@ -9,7 +9,7 @@ function Header({ cartQuantity, onCartClick }) {
     "https://res.cloudinary.com/dc2c49xov/image/upload/v1703352357/ecommerce-page";
 
   const [isCartClicked, setIsCartClicked] = useState(false);
-  const [isMenuVisible, setIsMenuVisible] = useState(false); // New state for menu visibility
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
 
   const handleCartClick = () => {
     onCartClick();
@@ -67,7 +67,6 @@ function Header({ cartQuantity, onCartClick }) {
         </div>
       </div>
       {isMenuVisible && <Menu />}{" "}
-      {/* Render Menu component if isMenuVisible is true */}
     </div>
   );
 }

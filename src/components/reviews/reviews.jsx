@@ -59,6 +59,7 @@ const Reviews = () => {
       setEditingIndex(index);
     };
 
+
     const onDelete = () => {
       deleteReview(index);
     };
